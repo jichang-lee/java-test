@@ -6,7 +6,6 @@ public class Multiple {
         // (1) 3의 배수를 구하고 7의 배수를 제외 -> limit 0~200
         // (2) 각 배수의 대한 합
 
-
         int total = 0;
 
         //(1)
@@ -17,7 +16,11 @@ public class Multiple {
             }
         }
         //(2)
-        System.out.println("(2)" + total);
+        System.out.println("(2) : " + total);
+
+
     }
+
+
 
 }
