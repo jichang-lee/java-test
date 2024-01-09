@@ -1,4 +1,4 @@
-package multiple;
+package baekjun;
 
 public class Multiple {
 
