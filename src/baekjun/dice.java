@@ -24,9 +24,6 @@ public class dice {
             prize = 10000 + dice[0] * 1000;
         }else if(dice[0] == dice[1] || dice[0] == dice[2] || dice[1]==dice[2]) {
             prize = 1000 + (dice[0] == dice[1] ? dice[0] : dice[2]) * 100;
-//        }else if(dice[0] != dice[1] && dice[1] != dice[2]){
-//            prize = Math.max(dice[0],Math.max(dice[1],dice[2])) * 100;
-//        } 그냥 else로 풀이
         }else {
             prize = Math.max(dice[0],Math.max(dice[1],dice[2])) * 100;
         }
