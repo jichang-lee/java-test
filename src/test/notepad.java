@@ -1,24 +1,30 @@
 package test;
 
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class notepad {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        int a = scanner.nextInt();
-        String str = "";
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int numLong = a/4;
-        for(int i = 0 ; i <numLong ; i++){
-            str += "long ";
+        int N = Integer.parseInt(br.readLine());
+
+        StringTokenizer st;
+
+        for (int j = 0; j < N; j++) {
+            st = new StringTokenizer(br.readLine()," ");
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            System.out.println(a+b);
         }
-            System.out.println(str + "int");
 
+        br.close();
 
     }
 
-
-
-
 }
+
+
+
+
