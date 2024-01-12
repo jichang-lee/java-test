@@ -1,27 +1,29 @@
 package test;
 
 import java.io.*;
-import java.util.StringTokenizer;
+import java.util.Scanner;
+
 
 public class notepad {
     public static void main(String[] args) throws IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        Scanner scanner = new Scanner(System.in);
 
 
-        int N = Integer.parseInt(br.readLine());
+        int T = scanner.nextInt();
 
-        StringTokenizer st;
+        for (int i = 1; i <= T; i++) {
+            int A = scanner.nextInt();
+            int B = scanner.nextInt();
 
-        for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine()," ");
-            bw.write((Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()))+ "\n");
+            int sum = A + B;
+
+            // 결과 출력
+            System.out.println("Case #" + i + ": " + sum);
         }
-        br.close();
 
-        bw.flush();
-        bw.close();
+
+
 
     }
 
