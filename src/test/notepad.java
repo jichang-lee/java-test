@@ -1,33 +1,28 @@
 package test;
 
 import java.io.*;
-import java.util.Scanner;
-
 
 public class notepad {
-    public static void main(String[] args) throws IOException {
+    public static void main(String args[]) throws IOException {
 
-        Scanner scanner = new Scanner(System.in);
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 
+        int a = Integer.parseInt(br.readLine());
 
-        int T = scanner.nextInt();
-
-        for (int i = 1; i <= T; i++) {
-            int A = scanner.nextInt();
-            int B = scanner.nextInt();
-
-            int sum = A + B;
-
-            // 결과 출력
-            System.out.println("Case #" + i + ": " + sum);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= a; i++) {
+            String str = br.readLine();
+            sb.append("Case #").append(i).append(": ")
+                    .append(str.charAt(0)-'0'+str.charAt(2)-'0').append('\n');
         }
-
-
-
-
+        System.out.println(sb);
     }
 
+
+
 }
+
+
 
 
 
