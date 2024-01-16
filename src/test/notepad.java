@@ -1,27 +1,24 @@
 package test;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class notepad {
-    public static void main(String args[]) throws IOException {
 
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
 
-        int a = Integer.parseInt(br.readLine());
+        int N = in.nextInt();
+        in.close();
 
-        StringBuilder sb = new StringBuilder();
-        for (int i = 1; i <= a; i++) {
-            String str = br.readLine();
-            sb.append("Case #").append(i).append(": ")
-                    .append(str.charAt(0)-'0'+str.charAt(2)-'0').append('\n');
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println(sb);
     }
-
-
-
 }
-
 
 
 
